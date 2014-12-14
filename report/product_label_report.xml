@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+  <data>
+	<report auto="False"  id="product_label_report_id"
+	model="wiz.product.label" name="product.label.report" rml="product_label_report/report/product_label_report.rml" string="Product Label"/>
+	
+	<report auto="False"  id="product_label_form_report_id"
+	model="product.product" name="product.label.form.report" rml="product_label_report/report/product_label_form_report.rml" string="Product Label(Form)"/>
+	
+</data>
+</openerp>

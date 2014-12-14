@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+	
+	<record id="wiz_product_label_view_id" model="ir.ui.view">
+			<field name="name">Product Label Report</field>
+			<field name="model">wiz.product.label</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml"> 
+				<form>
+					<field name="product_id" colspan="4" nolabel="1"  />
+					<separator colspan="4"/>
+					<group col="4" colspan="4"> 
+						<label string="" colspan="1"/>
+						<button special="cancel" string="Cancel" colspan="1" icon="gtk-cancel"/>						
+						<button name="print_report" string="Print" type="object" colspan="2" icon="gtk-forward"  />
+					</group>
+				</form>
+			</field>
+		</record>
+		
+		
+		
+	 <record id="wiz_product_label_action" model="ir.actions.act_window">
+            <field name="name">Product Label Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wiz.product.label</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="nodestroy">True</field>
+            <field name="view_id" ref="wiz_product_label_view_id"/>
+        </record>
+		
+		
+	
+	<menuitem id="menu_product_label_view" name="Product Label Report"
+            parent="base.menu_base_config" sequence="75" action="wiz_product_label_action"/>	
+	
+	
+	
+	</data>
+	</openerp>
+	

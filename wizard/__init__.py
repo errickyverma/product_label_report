@@ -1,0 +1,1 @@
+import wiz_product_label
